@@ -1,0 +1,24 @@
+SWIFTSHIP API DOCUMENTATION - PACKAGE ENTITY
+
+1. GET ALL PACKAGES
+- URL: /api/packages
+- Method: GET
+- Response: 200 OK (Returns JSON list of all packages)
+
+2. CREATE NEW PACKAGE
+- URL: /api/packages
+- Method: POST
+- Request Body (JSON): 
+  { "PackageID": 101, "Status": "Pending", "CustomerID": 1, "CourierID": 5 }
+- Response: 201 Created / 400 Bad Request
+
+3. UPDATE PACKAGE STATUS
+- URL: /api/packages/{id}
+- Method: PUT
+- Request Body (JSON): { "Status": "In Transit" }
+- Response: 200 OK / 404 Not Found
+
+4. DELETE PACKAGE
+- URL: /api/packages/{id}
+- Method: DELETE
+- Response: 200 OK / 404 Not Found
